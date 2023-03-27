@@ -6,6 +6,7 @@ To access Google Drive through this application, we need authorization from Goog
 
 
 ## how to run
+- step0: clone this repository
 - step1: open terminal
 - step2: navigate to location my-drive (this folder basically which you have downloaded)
 - step3: check if you have node installed, if not type command 'brew install node' if homebrew is installed on mac, or install nodejs if windows

@@ -9,7 +9,7 @@ To access Google Drive through this application, we need authorization from Goog
 - step0: clone this repository
 - step1: open terminal
 - step2: navigate to location my-drive (this folder basically which you have downloaded)
-- step3: check if you have node installed, if not type command 'brew install node' if homebrew is installed on mac, or install nodejs if windows
+- step3: To verify whether you have Node installed on your computer, you can run a check. If it is not installed, you can install it by using the command 'brew install node' if you are using a Mac with Homebrew installed, or by installing Nodejs if you are using Windows. It is important to note that the version of Node used for testing this is v19.8.1.
 - step4: after step3 install googleapis by typing command "npm install googleapis" (you can skip this step, as the modules are already added in repo)
 - step4: to run the app type command 'node app.js'
 - step5: go to http://localhost:3000 if not working open in incognito

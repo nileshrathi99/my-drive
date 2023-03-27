@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    .row
+        .col-md-8.col-md-offset-2
+            
+            if authorised
+                .pull-right
+                    a.btn.btn-default(href='/logout') Logout
+            
+            if !authorised
+                .text-center
+                    a.btn.btn-primary(href='/auth/google') Sign In Google
+                
+            else
+                h2 Contents
+                
+                if files.length == 0
+                    p No Files Found
+                else
+                    ul.list-group
+                        if folderId != 'root'
+                            li.list-group-item.list-group-item-warning
+                                a.glyphicon.glyphicon-arrow-up.no-underline(href='/')
+                        
+                        each file in files
+                            - var downloadLink = 'https://drive.google.com/uc?id=' + file.id + '&export=download'
+                            
+                            if file.mimeType == 'application/vnd.google-apps.folder'
+                                li.list-group-item.list-group-item-warning
+                                    strong
+                                        a.no-underline(href='/folders/' + file.id)
+                                            img(src=file.iconLink)
+                                            span= ' ' + file.title
+                                        .pull-right
+                                            a.glyphicon.glyphicon-eye-open.no-underline.dropdown-toggle(href='/viewers/' + file.id)
+
+                            else
+                                li.list-group-item
+                                    img(src=file.iconLink)
+                                    span= ' ' + file.title
+                                    .pull-right
+                                        a.glyphicon.glyphicon-arrow-down.no-underline(href=downloadLink)
+                                        a.glyphicon.glyphicon-eye-open.no-underline.dropdown-toggle(href='/viewers/' + file.id)

@@ -16,7 +16,7 @@ To access Google Drive through this application, we need authorization from Goog
 
 The application will start listening on port 3000. Open a web browser and go to http://localhost:3000 to view the application.
 
-# Files explaination
+# files
 
 ## config.json
 
@@ -94,7 +94,7 @@ If the user is authorized and there are files in the folder, it displays a list 
 
 The file also contains logic to generate the download link for each file, based on the file ID and MIME type.
 
-## extra note
+# extra note
 
 - to download the file click on the down arrow icon.
 - To see the list of people who have access to the file, click on the eye icon. Note that the view button will not display the names on the screen, but rather print them in the console.

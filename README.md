@@ -90,10 +90,12 @@ This is a Pug/Jade template file that extends a layout template and defines the 
 
 The main content of the page is enclosed within a block content directive. It first checks whether the user is authorized or not. If the user is authorized, it displays a logout button; otherwise, it displays a sign-in button that redirects the user to the Google authentication page.
 
-If the user is authorized and there are files in the folder, it displays a list of files in the folder. If there are no files, it displays a message stating that no files were found. Each file or folder is displayed as a list item. If the item is a folder, it displays an icon and a link to the folder, and a link to view its contents. If the item is a file, it displays an icon, the file title, and links to download the file and view it.
+If the user is authorized and there are files in the folder, it displays a list of files in the folder. If there are no files, it displays a message stating that no files were found. Each file or folder is displayed as a list item. If the item is a folder, it displays an icon and a link to the folder, and a link to view its contents. If the item is a file, it displays an icon, the file title, and links to download the file and view the users who have access to it.
 
 The file also contains logic to generate the download link for each file, based on the file ID and MIME type.
 
 ## extra note
 
-If your server is still running even after you have suspended app.js, you will need to terminate the process ID associated with port 3000. On a Mac, you can do this by running the following command: "lsof -i -P -n | grep LISTEN" to locate the PID associated with port 3000, and then use the command "kill -9 <PID>" to terminate the process.
+- to download the file click on the down arrow icon.
+- To see the list of people who have access to the file, click on the eye icon. Note that the view button will not display the names on the screen, but rather print them in the console.
+- If your server is still running even after you have suspended app.js, you will need to terminate the process ID associated with port 3000. On a Mac, you can do this by running the following command: "lsof -i -P -n | grep LISTEN" to locate the PID associated with port 3000, and then use the command "kill -9 <PID>" to terminate the process.
